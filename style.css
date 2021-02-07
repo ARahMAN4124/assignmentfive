@@ -32,3 +32,6 @@
   -ms-border-radius: 10px 10px 0 0;
   -o-border-radius: 10px 10px 0 0;
 }
+#input-value {
+  width: 20px !important;
+}

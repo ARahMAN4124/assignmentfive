@@ -46,14 +46,19 @@ const showDetails = (mealDetails) => {
   const searchResultmore = document.createElement("div");
   searchResultmore.className = "searchresultmore";
   let value = `
-        <img class="details-img" src="${mealDetails.strMealThumb}"></img>
-        <h2 class="meal-name">${mealDetails.strMeal}</h2>
-        <h5 class="meal-name">Ingrediients</h5>
+        <div class="card">
+        <img class="details-img card-img-top" src="${mealDetails.strMealThumb}"></img>
+        <div class="card-body">
+        <h2 class="meal-name card-title">${mealDetails.strMeal}</h2>
+        <h5 class="meal-name ">Ingrediients</h5>
         <p class="meal-name">-${mealDetails.strIngredient1}</p>
         <p class="meal-name">-${mealDetails.strIngredient2}</p>
         <p class="meal-name">-${mealDetails.strIngredient3}</p>
         <p class="meal-name">-${mealDetails.strIngredient4}</p>
         <p class="meal-name">-${mealDetails.strIngredient5}</p>
+        </div>
+        </div>
+        
         <p></p>
     `;
   searchResultmore.innerHTML = value;
