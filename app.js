@@ -26,7 +26,7 @@ const search = () => {
                         `;
         });
       } else {
-        alert("there is no food");
+        alert("No Result");
       }
 
       row.innerHTML = mealname;
