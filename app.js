@@ -2,6 +2,7 @@
 
 const button = document.getElementById("search");
 const searchInput = document.getElementById("input-value");
+
 const search = () => {
   const inputValue = searchInput.value;
   const showCase = document.getElementById("row");
@@ -25,7 +26,7 @@ const search = () => {
                             </div>
                           </div>
                     </div>
-                        `;
+                    `;
         });
       } else {
         alert("No Result");
