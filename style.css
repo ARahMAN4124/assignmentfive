@@ -35,3 +35,10 @@
 #input-value {
   width: 20px !important;
 }
+.fa-check-square {
+  padding: 5px;
+}
+#close {
+  margin-right: 0;
+  padding: 10px;
+}

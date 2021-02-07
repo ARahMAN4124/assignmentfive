@@ -1,8 +1,10 @@
+//veriable call
+
 const button = document.getElementById("search");
 const searchInput = document.getElementById("input-value");
 const search = () => {
   const inputValue = searchInput.value;
-  const row = document.getElementById("row");
+  const showCase = document.getElementById("row");
 
   // Loading item data by api
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
@@ -28,13 +30,11 @@ const search = () => {
       } else {
         alert("No Result");
       }
-
-      row.innerHTML = mealname;
+      showCase.innerHTML = mealname;
     });
 };
 
 //meals details option
-
 const mealsdetails = (name) => {
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
     .then((response) => response.json())
@@ -51,18 +51,15 @@ const showDetails = (mealDetails) => {
         <div class="card-body">
         <h2 class="meal-name card-title">${mealDetails.strMeal}</h2>
         <h5 class="meal-name ">Ingrediients</h5>
-        <p class="meal-name">-${mealDetails.strIngredient1}</p>
-        <p class="meal-name">-${mealDetails.strIngredient2}</p>
-        <p class="meal-name">-${mealDetails.strIngredient3}</p>
-        <p class="meal-name">-${mealDetails.strIngredient4}</p>
-        <p class="meal-name">-${mealDetails.strIngredient5}</p>
+        <p class="meal-name"><i class="fas fa-check-square"></i> ${mealDetails.strIngredient1}</p>
+        <p class="meal-name"><i class="fas fa-check-square"></i>${mealDetails.strIngredient2}</p>
+        <p class="meal-name"><i class="fas fa-check-square"></i>${mealDetails.strIngredient3}</p>
+        <p class="meal-name"><i class="fas fa-check-square"></i>${mealDetails.strIngredient4}</p>
+        <p class="meal-name"><i class="fas fa-check-square"></i>${mealDetails.strIngredient5}</p>
         </div>
         </div>
-        
-        <p></p>
     `;
   searchResultmore.innerHTML = value;
-
   //meal details option close button
   document.body.addEventListener("dblclick", () => {
     document
